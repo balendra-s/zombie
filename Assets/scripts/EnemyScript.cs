@@ -15,10 +15,6 @@ public class EnemyScript : MonoBehaviour
 
     void Update()
     {
-
-
-
         stalkerAgent.SetDestination(stalkerDest.transform.position);
-
     }
 }
