@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class ZombieDeath : MonoBehaviour
 {
-    public int EnemyHealth = 20;
+    public int EnemyHealth = 10;
     public GameObject TheEnemy;
+    public GameObject TheEnemyWrapper;
     public int StatusCheck;
 
     void DamageZombie(int DamageAmount)
     {
         EnemyHealth -= DamageAmount;
-    } 
+    }
 
     // Update is called once per frame
     void Update()
@@ -19,8 +20,16 @@ public class ZombieDeath : MonoBehaviour
         if (EnemyHealth <= 0 && StatusCheck == 0)
         {
             StatusCheck = 2;
-            TheEnemy.GetComponent<Animation>().Stop("walk");
-            TheEnemy.GetComponent<Animation>().Play("back_fall");
-        } 
+            TheEnemy.GetComponent<Animation>().Stop("Walking animation");
+
+
+            TheEnemy.GetComponent<Animation>().Play("Death animation");
+
+
+            TheEnemy.GetComponent<Animation>().Stop("Zombie Crawl");
+            TheEnemyWrapper.GetComponent<EnemyScript>().enabled = false;
+
+        }
+
     }
 }
