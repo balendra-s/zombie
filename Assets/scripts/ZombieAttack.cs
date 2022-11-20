@@ -4,14 +4,31 @@ using UnityEngine;
 
 public class ZombieAttack : MonoBehaviour
 {
+    public GameObject TheZombieWrapper;
     public GameObject TheZombie;
-    public GameObject Trigger;
+    public GameObject ThePlayer;
+    public bool attackTrigger;
+
     // Start is called before the first frame update
-    void onTriggerEnter()
+    void Update()
     {
-        TheZombie.GetComponent<Animation>().Play("Death animation");
+
+
+        if (attackTrigger == true)
+        {
+            TheZombieWrapper.GetComponent<EnemyScript>().enabled = false;
+            TheZombie.GetComponent<Animation>().Play("Death animation");
+            TheZombieWrapper.GetComponent<EnemyScript>().enabled = false;
+
+        }
+    }
+    void OnTriggerEnter()
+    {
+        attackTrigger = true;
     }
 
-    // Update is called once per frame
-
+    void OnTriggerExit()
+    {
+        attackTrigger = false;
+    }
 }
