@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static int currentHealth = 20;
+    public static int currentHealth = 40;
     public int internalHealth;
 
     void Update()
@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
         internalHealth = currentHealth;
         if (currentHealth <= 0)
         {
-
+            SceneManager.LoadScene(1);
         }
     }
 

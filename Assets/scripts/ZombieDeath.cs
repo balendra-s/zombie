@@ -22,17 +22,12 @@ public class ZombieDeath : MonoBehaviour
             StatusCheck = 2;
             TheEnemy.GetComponent<Animation>().Stop("Walking animation");
             TheEnemyWrapper.GetComponent<EnemyScript>().enabled = false;
+            TheEnemyWrapper.GetComponent<ZombieAttack>().enabled = false;
+            TheEnemyWrapper.GetComponent<BoxCollider>().enabled = false;
             TheEnemy.GetComponent<Animation>().Play("Death animation");
-            StartCoroutine(Delay());
+            //StartCoroutine(Delay());
         }
 
     }
 
-    IEnumerator Delay()
-    {
-        TheEnemyWrapper.GetComponent<ZombieAttack>().enabled = false;
-        yield return new WaitForSeconds(3.5f);
-        TheEnemy.SetActive(false);
-
-    }
 }
