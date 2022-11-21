@@ -21,15 +21,17 @@ public class ZombieDeath : MonoBehaviour
         {
             StatusCheck = 2;
             TheEnemy.GetComponent<Animation>().Stop("Walking animation");
-
-
-            TheEnemy.GetComponent<Animation>().Play("Death animation");
-
-
-            TheEnemy.GetComponent<Animation>().Stop("Zombie Crawl");
             TheEnemyWrapper.GetComponent<EnemyScript>().enabled = false;
-
+            TheEnemy.GetComponent<Animation>().Play("Death animation");
+            StartCoroutine(Delay());
         }
+
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(3.5f);
+        TheEnemy.SetActive(false);
 
     }
 }

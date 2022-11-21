@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ZombieAttack : MonoBehaviour
 {
-
     public GameObject TheZombieWrapper;
     public GameObject TheZombie;
     public GameObject ThePlayer;
@@ -13,14 +12,10 @@ public class ZombieAttack : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-
-
         if (attackTrigger == true)
         {
+            TheZombie.GetComponent<Animation>().Play("Attack animation");
             TheZombieWrapper.GetComponent<EnemyScript>().enabled = false;
-            TheZombie.GetComponent<Animation>().Play("Death animation");
-            TheZombieWrapper.GetComponent<EnemyScript>().enabled = false;
-
         }
     }
     void OnTriggerEnter()
@@ -30,6 +25,14 @@ public class ZombieAttack : MonoBehaviour
 
     void OnTriggerExit()
     {
+        StartCoroutine(Delay());
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(3.5f);
         attackTrigger = false;
+        TheZombieWrapper.GetComponent<EnemyScript>().enabled = true;
+        TheZombie.GetComponent<Animation>().Play("Walking animation");
     }
 }
