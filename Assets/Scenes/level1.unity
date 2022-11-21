@@ -801,6 +801,20 @@ MonoBehaviour:
   TheZombie: {fileID: 962418060}
   ThePlayer: {fileID: 825984859}
   attackTrigger: 0
+  isAttacking: 0
+--- !u!114 &126806351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126806342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6bc6571b4844d708f607e0dd08a780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  internalHealth: 0
 --- !u!1001 &137450851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3295,6 +3309,20 @@ MonoBehaviour:
   TheZombie: {fileID: 78240543}
   ThePlayer: {fileID: 825984859}
   attackTrigger: 0
+  isAttacking: 0
+--- !u!114 &399152469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399152454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6bc6571b4844d708f607e0dd08a780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  internalHealth: 0
 --- !u!1001 &406884611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15985,6 +16013,20 @@ MonoBehaviour:
   TheZombie: {fileID: 1616162754}
   ThePlayer: {fileID: 825984859}
   attackTrigger: 0
+  isAttacking: 0
+--- !u!114 &1746162161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649384445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6bc6571b4844d708f607e0dd08a780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  internalHealth: 0
 --- !u!1001 &1767303923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16077,6 +16119,10 @@ PrefabInstance:
       propertyPath: m_Animations.Array.data[3]
       value: 
       objectReference: {fileID: 7400000, guid: 6e77a79b2f0a841a9b85dd048ab2c275, type: 2}
+    - target: {fileID: 648830259624906559, guid: 294140e5d5c0548f795b072ac5068a80, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6044777057632848448, guid: 294140e5d5c0548f795b072ac5068a80, type: 3}
       propertyPath: m_Name
       value: Crawling
@@ -16101,12 +16147,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 101.077
       objectReference: {fileID: 0}
+    - target: {fileID: 6855100289487974450, guid: 294140e5d5c0548f795b072ac5068a80, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6855100289487974451, guid: 294140e5d5c0548f795b072ac5068a80, type: 3}
       propertyPath: m_Name
       value: 'Zombie '
       objectReference: {fileID: 0}
     - target: {fileID: 6855100289487974451, guid: 294140e5d5c0548f795b072ac5068a80, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855100289487974457, guid: 294140e5d5c0548f795b072ac5068a80, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855100289487974462, guid: 294140e5d5c0548f795b072ac5068a80, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6855100289487974462, guid: 294140e5d5c0548f795b072ac5068a80, type: 3}
@@ -17650,7 +17708,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922734551}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84102768586024248ba2960026b1268e, type: 3}
   m_Name: 
@@ -17659,6 +17717,7 @@ MonoBehaviour:
   TheZombie: {fileID: 2073435213}
   ThePlayer: {fileID: 825984859}
   attackTrigger: 0
+  isAttacking: 0
 --- !u!1001 &1926491545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22897,3 +22956,17 @@ MonoBehaviour:
   TheZombie: {fileID: 1989453318}
   ThePlayer: {fileID: 825984859}
   attackTrigger: 0
+  isAttacking: 0
+--- !u!114 &6206856157552540421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718574302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6bc6571b4844d708f607e0dd08a780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  internalHealth: 0

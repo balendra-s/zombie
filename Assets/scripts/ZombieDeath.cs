@@ -30,6 +30,7 @@ public class ZombieDeath : MonoBehaviour
 
     IEnumerator Delay()
     {
+        TheEnemyWrapper.GetComponent<ZombieAttack>().enabled = false;
         yield return new WaitForSeconds(3.5f);
         TheEnemy.SetActive(false);
 
