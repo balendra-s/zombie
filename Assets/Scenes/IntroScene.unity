@@ -24,9 +24,9 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.32
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.5377358, g: 0.46991453, b: 0.32720718, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7e1e5781d39549148abcbf66c428df00, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 0.363
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.046216037, g: 0.04869536, b: 0.043951448, a: 0.363}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.014784202, g: 0.018353336, b: 0.030218529, a: 0.363}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5236,6 +5236,11 @@ Transform:
   m_Father: {fileID: 1355974430}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!20 &231112534 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 895317699806229435, guid: 94a8553c9b3964998a80112e7eb8b041, type: 3}
+  m_PrefabInstance: {fileID: 752742611297215144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &238997156
 GameObject:
   m_ObjectHideFlags: 0
@@ -14070,6 +14075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 437036926410379460, guid: 39ffcdd89b3cb4f55946de89ffe7b4c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ffcdd89b3cb4f55946de89ffe7b4c6, type: 3}
 --- !u!1001 &752742611297215144
@@ -14079,6 +14088,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 752742612363359952, guid: 94a8553c9b3964998a80112e7eb8b041, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 231112534}
+    - target: {fileID: 752742612363359952, guid: 94a8553c9b3964998a80112e7eb8b041, type: 3}
+      propertyPath: walkingSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 752742612363359961, guid: 94a8553c9b3964998a80112e7eb8b041, type: 3}
       propertyPath: m_Name
       value: Player
