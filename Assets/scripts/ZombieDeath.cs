@@ -6,7 +6,7 @@ public class ZombieDeath : MonoBehaviour
 {
     public int EnemyHealth = 10;
     public GameObject TheEnemy;
-    public GameObject TheEnemyWrapper;
+    //public GameObject TheEnemyWrapper;
     public int StatusCheck;
 
     void DamageZombie(int DamageAmount)
@@ -21,11 +21,11 @@ public class ZombieDeath : MonoBehaviour
         {
             StatusCheck = 2;
             TheEnemy.GetComponent<Animation>().Stop("Walking animation");
-            TheEnemyWrapper.GetComponent<EnemyScript>().enabled = false;
-            TheEnemyWrapper.GetComponent<ZombieAttack>().enabled = false;
-            TheEnemyWrapper.GetComponent<BoxCollider>().enabled = false;
             TheEnemy.GetComponent<Animation>().Play("Death animation");
-            //StartCoroutine(Delay());
+            this.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
+            this.GetComponent<BoxCollider>().enabled = false;
+            this.GetComponent<ZombieAttack>().enabled = false;
+            this.GetComponent<EnemyScript>().enabled = false;
         }
 
     }
