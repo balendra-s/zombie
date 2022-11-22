@@ -58,6 +58,7 @@ public class IntroductionSequencing : MonoBehaviour
         thudSound.Play();
         yield return new WaitForSeconds(1);
         loadText.SetActive(true);
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(2);
     }
 
