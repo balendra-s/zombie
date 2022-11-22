@@ -19,8 +19,8 @@ public class MainMenuFunction : MonoBehaviour
     {
         fadeOut.SetActive(true);
         buttonClick.Play();
-        yield return new WaitForSeconds(3);
         loadText.SetActive(true);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene(1);
     }
 }
