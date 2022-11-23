@@ -43,6 +43,5 @@ public class MainMenuFunction : MonoBehaviour
     {
         buttonClick.Play();
         SceneManager.LoadScene(0);
-
     }
 }
