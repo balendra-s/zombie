@@ -23,4 +23,19 @@ public class MainMenuFunction : MonoBehaviour
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(1);
     }
+
+
+    public void LoadCreditsButton()
+    {
+        StartCoroutine(LoadCredits());
+    }
+
+    IEnumerator LoadCredits()
+    {
+        yield return new WaitForSeconds(0);
+        SceneManager.LoadScene(4);
+        buttonClick.Play();
+        yield return new WaitForSeconds(10);
+        SceneManager.LoadScene(0);
+    }
 }
