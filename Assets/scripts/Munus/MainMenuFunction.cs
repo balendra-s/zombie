@@ -38,4 +38,11 @@ public class MainMenuFunction : MonoBehaviour
         yield return new WaitForSeconds(10);
         SceneManager.LoadScene(0);
     }
+
+    public void ReturnToMainMenu()
+    {
+        buttonClick.Play();
+        SceneManager.LoadScene(0);
+
+    }
 }
