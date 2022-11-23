@@ -25,17 +25,13 @@ public class MainMenuFunction : MonoBehaviour
     }
 
 
-    public void LoadCreditsButton()
+    public void LoadCredits()
     {
-        StartCoroutine(LoadCredits());
+        SceneManager.LoadScene(4);
     }
 
-    IEnumerator LoadCredits()
+    public void LoadControls()
     {
-        yield return new WaitForSeconds(0);
-        SceneManager.LoadScene(4);
-        buttonClick.Play();
-        yield return new WaitForSeconds(10);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(5);
     }
 }
