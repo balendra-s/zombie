@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MainMenuFunction : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class MainMenuFunction : MonoBehaviour
     public GameObject fadeOut;
     public GameObject loadText;
     public AudioSource buttonClick;
+    public AudioMixer mainMixer;
 
     public void NewGameButton()
     {
@@ -34,4 +36,16 @@ public class MainMenuFunction : MonoBehaviour
     {
         SceneManager.LoadScene(5);
     }
+
+    public void ExitGame()
+    {
+        Debug.Log("Exited game");
+        Application.Quit();
+    }
+
+    public void SetVolume(float volume)
+    {
+        mainMixer.SetFloat("volume", volume);
+    }
+
 }
