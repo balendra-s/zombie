@@ -4501,6 +4501,7 @@ MonoBehaviour:
   Player: {fileID: 825984859}
   Survivor: {fileID: 682274752}
   isNearPlayer: 0
+  isIdle: 0
 --- !u!114 &460950427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16379,7 +16380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1397832101
 Transform:
   m_ObjectHideFlags: 0
@@ -26355,7 +26356,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh107744
+  m_Name: pb_Mesh98318
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

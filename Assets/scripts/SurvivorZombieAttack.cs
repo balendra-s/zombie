@@ -14,7 +14,6 @@ public class SurvivorZombieAttack : MonoBehaviour
     public GameObject ZombieWrapper1;
 
 
-
     void OnTriggerEnter(Collider collider)
     {
         Trigger.GetComponent<BoxCollider>().enabled = false;

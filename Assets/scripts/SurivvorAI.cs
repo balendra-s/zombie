@@ -5,37 +5,48 @@ using UnityEngine;
 public class SurivvorAI : MonoBehaviour
 {
 
-
-
     public GameObject Player;
     public GameObject Survivor;
 
     public bool isNearPlayer = false;
+    public bool isIdle = false;
 
 
 
     void Update()
     {
-        if (isNearPlayer == true)
+        if (isNearPlayer == true && isIdle == false)
         {
-            print("near");
             this.GetComponent<EnemyScript>().enabled = false;
-        }
-        else
-        {
-            this.GetComponent<EnemyScript>().enabled = true;
-            print("distancen");
-            //Survivor.GetComponent<Animation>().Play("Injured walking");
+            this.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
+            Survivor.GetComponent<Animation>().Play("Idle animation");
+            StartCoroutine(moveSurvivor());
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter()
     {
         isNearPlayer = true;
     }
 
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit()
+    {
+        StartCoroutine(Delay());
+    }
+
+    IEnumerator Delay()
     {
         isNearPlayer = false;
+        yield return new WaitForSeconds(2.0f);
+        this.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = true;
+        this.GetComponent<EnemyScript>().enabled = true;
+        Survivor.GetComponent<Animation>().Play("Injured walking");
+    }
+    IEnumerator moveSurvivor()
+    {
+        isNearPlayer = true;
+        yield return new WaitForSeconds(1.0f);
+        isNearPlayer = false;
+
     }
 }
