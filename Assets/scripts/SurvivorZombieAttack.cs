@@ -31,16 +31,8 @@ public class SurvivorZombieAttack : MonoBehaviour
         TheSurvivorWrapper.GetComponent<SurivvorAI>().enabled = true;
         NextLevelTrigger.SetActive(true);
         HintTextNextLevel.SetActive(true);
-        StartCoroutine(Delay());
-
         Trigger.SetActive(false);
     }
 
-    IEnumerator Delay()
-    {
-        print("Delay is active");
-        yield return new WaitForSeconds(5.0f);
-        HintTextNextLevel.SetActive(false);
 
-    }
 }

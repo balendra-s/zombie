@@ -43,7 +43,7 @@ public class ZombieAttack : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         PlayerHealth.currentHealth -= 5;
         attackEffect.SetActive(false);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         isAttacking = false;
 
     }

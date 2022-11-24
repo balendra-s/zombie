@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public static int currentHealth = 50;
     public int internalHealth;
     public GameObject playerHealth;
+    public GameObject attackEffect;
 
     void Update()
     {
@@ -16,8 +17,16 @@ public class PlayerHealth : MonoBehaviour
         internalHealth = currentHealth;
         if (currentHealth <= 0)
         {
-            SceneManager.LoadScene(0);
+            attackEffect.SetActive(false);
+            playerHealth.SetActive(false);
+            StartCoroutine(ExitGame());
         }
+    }
+
+    IEnumerator ExitGame()
+    {
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene(0);
     }
 
 
