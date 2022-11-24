@@ -9,6 +9,7 @@ public class PistolPickUp
     public GameObject FakePistol;
     public GameObject RealPistol;
     public GameObject ExtraCursor;
+    public GameObject Cursor;
     public GameObject HintText;
 
     public static bool isPistolPicked;
@@ -28,6 +29,7 @@ public class PistolPickUp
                 RealPistol.SetActive(true);
                 ExtraCursor.SetActive(false);
                 HintText.SetActive(false);
+                Cursor.SetActive(true);
                 isPistolPicked = true;
 
             }
