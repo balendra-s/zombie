@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ZombieAttack : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class ZombieAttack : MonoBehaviour
     public GameObject ThePlayer;
     public bool attackTrigger = false;
     public bool isAttacking = false;
+    public GameObject attackEffect;
 
     void Update()
     {
@@ -37,8 +39,10 @@ public class ZombieAttack : MonoBehaviour
     IEnumerator HurtPlayer()
     {
         isAttacking = true;
-        yield return new WaitForSeconds(1.0f);
+        attackEffect.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
         PlayerHealth.currentHealth -= 5;
+        attackEffect.SetActive(false);
         yield return new WaitForSeconds(0.2f);
         isAttacking = false;
 
