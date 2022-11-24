@@ -11,6 +11,8 @@ public class PistolPickUp
     public GameObject ExtraCursor;
     public GameObject HintText;
 
+    public static bool isPistolPicked;
+
 
     void OnTriggerStay(Collider other)
     {
@@ -26,6 +28,7 @@ public class PistolPickUp
                 RealPistol.SetActive(true);
                 ExtraCursor.SetActive(false);
                 HintText.SetActive(false);
+                isPistolPicked = true;
 
             }
         }
