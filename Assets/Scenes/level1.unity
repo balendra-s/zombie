@@ -4292,6 +4292,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 451602681}
     m_Modifications:
+    - target: {fileID: 1702271518, guid: 509d5582627d040379fc4a372925e293, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1911906947, guid: 509d5582627d040379fc4a372925e293, type: 3}
       propertyPath: GunFire
       value: 
