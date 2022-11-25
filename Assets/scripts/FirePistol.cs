@@ -16,15 +16,17 @@ public class FirePistol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!PauseMenu.GameIsPaused) 
+        { 
+            Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
+            Debug.DrawRay(transform.position, forward, Color.green);
 
-        Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
-        Debug.DrawRay(transform.position, forward, Color.green);
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            if (IsFiring == false)
+            if (Input.GetButtonDown("Fire1"))
             {
+                if (IsFiring == false)
+                {
                 StartCoroutine(FiringPistol());
+                }
             }
         }
     }

@@ -19,7 +19,10 @@ public class PlayerCameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RotateCamera();
+        if (!PauseMenu.GameIsPaused) 
+        { 
+            RotateCamera();
+        }
     }
 
     private void RotateCamera()
