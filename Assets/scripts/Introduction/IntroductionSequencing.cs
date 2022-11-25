@@ -7,11 +7,14 @@ using UnityEngine.SceneManagement;
 public class IntroductionSequencing : MonoBehaviour
 {
 
+    
+
     public GameObject textBox;
     public GameObject placeDisplay;
     public AudioSource thudSound;
     public GameObject allBlack;
     public GameObject loadText;
+    public GameObject skipIntroText;
 
 
     // Start is called before the first frame update
@@ -21,9 +24,20 @@ public class IntroductionSequencing : MonoBehaviour
     }
 
 
+    void Update()
+    {
+        // skips the introduction animation if the enter/return key is pressed 
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+
+    // to display text in textbox under introduction animation 
     IEnumerator SequenceBegin()
     {
         yield return new WaitForSeconds(3);
+        skipIntroText.SetActive(true);
         placeDisplay.SetActive(true);
         yield return new WaitForSeconds(4);
         placeDisplay.SetActive(false);
@@ -43,7 +57,7 @@ public class IntroductionSequencing : MonoBehaviour
         textBox.GetComponent<Text>().text = "";
         yield return new WaitForSeconds(3);
         textBox.GetComponent<Text>().text = "Little did I know that this was only the beginning.";
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         allBlack.SetActive(true);
         textBox.GetComponent<Text>().text = "*knocked out*";
         thudSound.Play();
