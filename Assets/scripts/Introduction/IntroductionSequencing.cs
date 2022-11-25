@@ -23,7 +23,7 @@ public class IntroductionSequencing : MonoBehaviour
         StartCoroutine(SequenceBegin());
     }
 
-
+    // this function is called for every fram 
     void Update()
     {
         // skips the introduction animation if the enter/return key is pressed 
