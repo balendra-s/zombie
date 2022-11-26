@@ -40,6 +40,12 @@ public class MainMenuFunction : MonoBehaviour
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(1);
     }
+
+    // resume the game 
+    public void ResumeGame()
+    {
+        SceneManager.LoadScene("level1");
+    }
     
     // Stops the application
     public void ExitGame()
