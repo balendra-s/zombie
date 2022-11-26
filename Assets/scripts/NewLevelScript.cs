@@ -12,5 +12,7 @@ public class NewLevelScript : MonoBehaviour
     void OnTriggerEnter()
     {
         SceneManager.LoadScene(0);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
