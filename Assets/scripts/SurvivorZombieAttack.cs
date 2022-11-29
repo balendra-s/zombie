@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Attached to the zombies that are inside the room with the survivor.
+// This makes the zombies follow the survivor. 
+// The player cannot shoot the zombies from outside of the room.
 public class SurvivorZombieAttack : MonoBehaviour
 {
     // Start is called before the first frame update

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Activates a attacking animation when the zombies comes
+// near the player.
 public class ZombieAttack : MonoBehaviour
 {
     public GameObject TheZombie;
@@ -36,6 +38,8 @@ public class ZombieAttack : MonoBehaviour
         TheZombie.GetComponent<Animation>().Play("Walking animation");
     }
 
+    // Reduces the player health by 5 points, 
+    // every time he is attacked and activates attack effect. 
     IEnumerator HurtPlayer()
     {
         isAttacking = true;

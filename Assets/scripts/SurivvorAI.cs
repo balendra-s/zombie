@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// To make the survivor to follow the player. 
+// The survivor goes to idle animation when he is near the player, 
+// and goes to injured walking animation when distance is increased 
+// between the player and the survivor.
 public class SurivvorAI : MonoBehaviour
 {
 
@@ -11,8 +15,8 @@ public class SurivvorAI : MonoBehaviour
     public bool isNearPlayer = false;
     public bool isIdle = false;
 
-
-
+    // Checks whether the survivor is near the player and 
+    // activates animations according to the result.
     void Update()
     {
         if (isNearPlayer == true && isIdle == false)
@@ -24,6 +28,7 @@ public class SurivvorAI : MonoBehaviour
         }
     }
 
+    // Set to true when the survivor is near the player.
     void OnTriggerEnter()
     {
         isNearPlayer = true;

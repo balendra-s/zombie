@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Keep track of the zombie health. 
+// When the health is under or zero 
+// death animation is played. 
 public class ZombieDeath : MonoBehaviour
 {
     public int EnemyHealth = 10;
     public GameObject TheEnemy;
     //public GameObject TheEnemyWrapper;
     public int StatusCheck;
+
 
     void DamageZombie(int DamageAmount)
     {
